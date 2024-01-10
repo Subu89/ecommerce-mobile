@@ -38,6 +38,19 @@ app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
+// route
+// routes imports
+import testRoutes from "./routes/testRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import categoryRoutes from "./routes/categoryRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
+app.use("/api/v1", testRoutes);
+app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/product", productRoutes);
+app.use("/api/v1/cat", categoryRoutes);
+app.use("/api/v1/order", orderRoutes);
+
 app.get("/", (req, res) => {
     return res.status(200).send("<h1>Welcome to Node server </h1>");
 });

@@ -79,6 +79,7 @@ export const loginController = async (req, res) => {
     console.log("Body is: ", req.body);
     //check pass
     const isMatch = await user.comparePassword(password);
+    console.log("isMatch value: ", isMatch);
     //valdiation pass
     if (!isMatch) {
       return res.status(500).send({

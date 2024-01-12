@@ -75,6 +75,8 @@ export const loginController = async (req, res) => {
         message: "USer Not Found",
       });
     }
+    console.log("Found User is: ", user);
+    console.log("Body is: ", req.body);
     //check pass
     const isMatch = await user.comparePassword(password);
     //valdiation pass

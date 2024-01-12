@@ -8,4 +8,4 @@ export default configureStore({
 });
 
 // HOST
-export const server = "https://combative-cod-life-jacket.cyclic.app/api/v1";
+export const server = "https://myecommerceapp-w3di.onrender.com/api/v1";
